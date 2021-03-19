@@ -17,5 +17,10 @@ namespace AulaHeranca
 
         public double Valor { get => valor; set => valor = value; }
         public string Nome { get => nome; set => nome = value; }
+
+        public override string ToString() {
+            return String.Format("{0} -> R$ {1}", Nome, Valor.ToString("C"));
+
+        }
     }
 }

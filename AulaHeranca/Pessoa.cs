@@ -4,14 +4,13 @@ using System.Text;
 
 namespace AulaHeranca
 {
-    class Pessoa
+    abstract class Pessoa
     {
         //atributos
         private string nome;
         private int idade;
         private char sexo;
         private long cpf;
-
         // construtor
 
         public Pessoa() { }
@@ -21,6 +20,7 @@ namespace AulaHeranca
             this.Idade = idade;
             this.Sexo = sexo;
             this.Cpf = cpf;
+            
         }
 
         // metodos getter e setter
@@ -29,10 +29,14 @@ namespace AulaHeranca
         public char Sexo { get => sexo; set => sexo = value; }
         public long Cpf { get => cpf; set => cpf = value; }
 
+        public override string ToString() {
+            return "Nome: " + Nome + "\n" +
+                   "Idade: " + Idade + "\n" +
+                   "Sexo: " + Sexo + "\n" +
+                   "Cpf: " + Cpf + "\n";
+        }
 
-
-
-
+    
 
     }
 }

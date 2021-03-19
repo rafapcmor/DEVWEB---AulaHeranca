@@ -16,5 +16,13 @@ namespace AulaHeranca
 
         public double Matricula { get => matricula; set => matricula = value; }
         public double Salario { get => salario; set => salario = value; }
+
+        public override string ToString()
+        {
+            return base.ToString() + 
+                "Salario: R$ " + Salario.ToString("C") + "\n" +
+                "Matricula: " + Matricula;
+        }
+
     }
 }

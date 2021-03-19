@@ -22,5 +22,20 @@ namespace AulaHeranca
             }
             return total;
         }
+
+        public override string ToString()
+        {
+            string vendas, texto1, texto2;
+            texto1 = base.ToString();
+            vendas = "\nVendas:\n";
+            foreach (Venda v in ListaVendas)
+            {
+                vendas += v.ToString();
+            }
+
+            texto2 = "\nValor Total das Vendas de " + base.Nome + " é R$ " + ObterTotalVendas().ToString("C") + ": " + "\n";
+            return texto1 + vendas + texto2;
+
+        }
     }
 }

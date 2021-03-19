@@ -13,5 +13,11 @@ namespace AulaHeranca
         }
 
         public string TipoCliente { get => tipoCliente; set => tipoCliente = value; }
+
+        public override string ToString()
+        {
+            return base.ToString() + "Tipo Cliente: " + TipoCliente;
+        }
+
     }
 }

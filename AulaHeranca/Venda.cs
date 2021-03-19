@@ -24,5 +24,15 @@ namespace AulaHeranca
 
             return produtoVendido.Valor * quantidadeVendida;
         }
+
+        public override string ToString()
+        {
+            return "--------Venda--------" +
+           "\nProduto: " + ProdutoVendido.ToString() +
+           "\nCliente: " + Comprador.ToString() +
+           "\nQuantidade Vendida: " + QuantidadeVendida +
+           "\nValor da Venda R$ " + ObterValorVenda().ToString("C") + ": " +
+           "\n";
+        }
     }
 }
